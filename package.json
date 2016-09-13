@@ -74,6 +74,5 @@
   },
   "engines": {
     "node": ">= 6.4.0"
-  },
-  "homepage": "http://telpalbrox.github.io/auto-codes-client"
+  }
 }
