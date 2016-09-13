@@ -1,5 +1,5 @@
 const config = {
-    apiUrl: 'http://192.168.0.161:3001'
+    apiUrl: 'https://auto-codes-api.herokuapp.com'
 };
 
 export default config;
