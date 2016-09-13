@@ -1,0 +1,14 @@
+.link {
+    color: white;
+    text-decoration: none;
+}
+
+.code-card {
+    margin-bottom: 20px;
+}
+
+.code-load {
+    position: absolute;
+    top: 85px;
+    left: 41%;
+}
