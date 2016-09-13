@@ -71,5 +71,8 @@
   },
   "eslintConfig": {
     "extends": "./config/eslint.js"
+  },
+  "engines": {
+    "node": ">= 6.4.0"
   }
 }
