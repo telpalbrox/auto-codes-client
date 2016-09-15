@@ -1,0 +1,8 @@
+{
+  "name": "Autocodes Luna",
+  "short_name": "AutocodesLuna",
+  "start_url": ".",
+  "display": "standalone",
+  "background_color": "#eadd00",
+  "description": "Web for get info about an OBDII code written in TypeScript."
+}
