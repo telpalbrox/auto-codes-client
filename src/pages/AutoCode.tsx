@@ -18,9 +18,6 @@ interface CarBrandPageProps {
 }
 
 class AutoCodePage extends React.Component<CarBrandPageProps, any> {
-    private code: string;
-    private brand: string;
-
     static mapStateToProps(state: AppState) {
         const { autoCode, loading, notFound } = state.autoCodes;
         const { language } = state.settings;
@@ -28,9 +25,7 @@ class AutoCodePage extends React.Component<CarBrandPageProps, any> {
     }
 
     componentDidMount() {
-        this.code = this.props.params.code;
-        this.brand = this.props.params.brand;
-        this.props.dispatch(findAutoCode(this.code, this.brand, this.props.language));
+        this.props.dispatch(findAutoCode(this.props.params.code, this.props.params.brand, this.props.language));
     }
 
     render() {
@@ -53,7 +48,7 @@ class AutoCodePage extends React.Component<CarBrandPageProps, any> {
 
         return (
             <div>
-                <h3 style={{ textAlign: 'center' }}>Codigo {this.code.toUpperCase()} marca {this.brand}</h3>
+                <h3 style={{ textAlign: 'center' }}>Codigo {this.props.params.code.toUpperCase()} marca {this.props.params.brand}</h3>
                 <div className="code-card">
                     <Card>
                         <CardTitle title="Descripcion"/>
