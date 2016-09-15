@@ -10,6 +10,7 @@ interface CarBrandPageProps {
     autoCode: AutoCode;
     loading: boolean;
     notFound: boolean;
+    language: string;
     params: {
         code: string;
         brand: string;
@@ -22,13 +23,14 @@ class AutoCodePage extends React.Component<CarBrandPageProps, any> {
 
     static mapStateToProps(state: AppState) {
         const { autoCode, loading, notFound } = state.autoCodes;
-        return { autoCode, loading, notFound };
+        const { language } = state.settings;
+        return { autoCode, loading, notFound, language };
     }
 
     componentDidMount() {
         this.code = this.props.params.code;
         this.brand = this.props.params.brand;
-        this.props.dispatch(findAutoCode(this.code, this.brand));
+        this.props.dispatch(findAutoCode(this.code, this.brand, this.props.language));
     }
 
     render() {

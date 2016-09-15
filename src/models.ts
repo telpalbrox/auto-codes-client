@@ -1,5 +1,6 @@
 import {AutoCodesState} from "./reducers/autoCodesReducer";
 import {RouterState} from "react-router";
+import {SettingsState} from "./reducers/settingsReducer";
 
 export interface AutoCode {
     possiblesCauses: string;
@@ -10,5 +11,6 @@ export interface AutoCode {
 
 export interface AppState {
     autoCodes: AutoCodesState;
-    routing: RouterState
+    routing: RouterState,
+    settings: SettingsState
 }

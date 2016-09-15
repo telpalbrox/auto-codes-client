@@ -16,3 +16,8 @@
 .brand-image {
     margin: 20px 0;
 }
+
+.page-container {
+    width: 89%;
+    margin: 0 auto;
+}

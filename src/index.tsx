@@ -15,6 +15,8 @@ import { autoCodesReducer } from './reducers/autoCodesReducer'
 import Home from './pages/Home';
 import CarBrand from './pages/CarBrand';
 import AutoCodePage from './pages/AutoCode';
+import SettingsPage from './pages/Settings';
+import {settingsReducer} from "./reducers/settingsReducer";
 
 require('flexboxgrid');
 require('react-tap-event-plugin')();
@@ -22,7 +24,8 @@ require('react-tap-event-plugin')();
 const store = createStore(combineReducers({
     carBrands: carBrandsReducer,
     autoCodes: autoCodesReducer,
-    routing: routerReducer
+    routing: routerReducer,
+    settings: settingsReducer
 }), compose(applyMiddleware(thunk, routerMiddleware(hashHistory)), (window as any).devToolsExtension ? (window as any).devToolsExtension() : (f) => f));
 
 const history = syncHistoryWithStore(hashHistory, store);
@@ -34,6 +37,7 @@ ReactDOM.render(
                 <IndexRoute component={Home}/>
                 <Route path="/brand/:carBrand" component={CarBrand} />
                 <Route path="/code/:brand/:code" component={AutoCodePage} />
+                <Route path="/settings" component={SettingsPage} />
             </Route>
         </Router>
     </Provider>,
