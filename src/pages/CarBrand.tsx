@@ -37,6 +37,9 @@ class CarBrandPage extends React.Component<CarBrandPageProps, any> {
         return (
             <div>
                 <div className="row center-xs">
+                    <img className="brand-image" src={ this.carBrand.image }/>
+                </div>
+                <div className="row center-xs">
                     <TextField
                         hintText="Introduce el codigo"
                         floatingLabelText={`Codigo ${this.carBrand.name}`}
